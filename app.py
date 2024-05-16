@@ -36,10 +36,10 @@ if user_question :
 try:
 
         #if user_question:
-            agent = create_pandas_dataframe_agent(OpenAI(model_name="gpt-4o",temperature=0), df, verbose=True)
-            with get_openai_callback() as cb:
-                response = agent.run(user_question)
-                print(cb)
-            st.write(response)
-except:
+   agent = create_pandas_dataframe_agent(OpenAI(model_name="gpt-4o",temperature=0), df, verbose=True)
+   with get_openai_callback() as cb:
+        response = agent.run(user_question)
+       #print(cb)
+      st.write(response)
+ except:
      pass    
