@@ -2,3 +2,4 @@ streamlit
 langchain-community
 langchain-experimental
 openai==0.28
+tabulate
