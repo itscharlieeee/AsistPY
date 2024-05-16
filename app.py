@@ -16,8 +16,11 @@ import numpy as np
 
 #client = OpenAI(base_url="http://localhost:1234/v1", api_key="not-needed")
 
-st.title('Analítica de datos con Agentes 🤖🔍')
 
+
+st.title('Analítica de datos con Agentes 🤖🔍')
+ke = st.text_input('Ingresa tu Clave')
+os.environ['OPENAI_API_KEY'] = ke
 
 
 uploaded_file = st.file_uploader('Choose a file')
@@ -33,7 +36,7 @@ if user_question :
 try:
     #st.write(df1)
     if user_question:
-            agent = create_pandas_dataframe_agent(OpenAI(base_url="http://localhost:1234/v1", api_key="not-needed"), df, verbose=True)
+            agent = create_pandas_dataframe_agent(OpenAI(model_name="gpt-4o"), df, verbose=True)
             with get_openai_callback() as cb:
                 response = agent.run(user_question)
                 #print(cb)
