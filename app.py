@@ -40,6 +40,6 @@ if user_question :
     with get_openai_callback() as cb:
         response = agent.run(user_question)
        #print(cb)
-      st.write(response)
+        st.write(response)
   except:
     pass    
