@@ -36,7 +36,7 @@ if user_question :
 try:
     #st.write(df1)
     if user_question:
-            agent = create_pandas_dataframe_agent(OpenAI(model_name="gpt-4o"), df, verbose=True)
+            agent = create_pandas_dataframe_agent(OpenAI(model_name="gpt-4"), df, verbose=True)
             with get_openai_callback() as cb:
                 response = agent.run(user_question)
                 #print(cb)
