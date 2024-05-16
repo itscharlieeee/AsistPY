@@ -32,14 +32,14 @@ st.write('Te ayduaré a analizar los datos que cargues.')
 
 user_question = st.text_input("Que desesas saber de los datos?:")
 if user_question :
-    user_question=user_question+', una vez resuelto responde siempre en español, si es un número escribe el número no uses letras'
+    # user_question=user_question+', una vez resuelto responde siempre en español, si es un número escribe el número no uses letras'
 try:
 
-        if user_question:
+        #if user_question:
             agent = create_pandas_dataframe_agent(OpenAI(model_name="gpt-4o",temperature=0), df, verbose=True)
             with get_openai_callback() as cb:
                 response = agent.run(user_question)
                 print(cb)
-        st.write(response)
+            st.write(response)
 except:
      pass    
