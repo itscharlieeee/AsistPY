@@ -1,4 +1,4 @@
 streamlit
 langchain-community
 langchain-experimental
-openai
+openai==0.28
