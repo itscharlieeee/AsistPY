@@ -14,9 +14,6 @@ import json
 import pandas as pd
 import numpy as np
 
-#client = OpenAI(base_url="http://localhost:1234/v1", api_key="not-needed")
-
-
 
 st.title('Analítica de datos con Agentes 🤖🔍')
 ke = st.text_input('Ingresa tu Clave')
@@ -25,14 +22,14 @@ os.environ['OPENAI_API_KEY'] = ke
 
 uploaded_file = st.file_uploader('Choose a file')
 if uploaded_file is not None:
-   df=pd.read_csv(uploaded_file, on_bad_lines='skip') #on_bad_lines='skip'
+   df=pd.read_csv(uploaded_file, on_bad_lines='skip') 
    st.write(df)
 
 st.write('Te ayduaré a analizar los datos que cargues.')
 
 user_question = st.text_input("Que desesas saber de los datos?:")
 if user_question :
-    # user_question=user_question+', una vez resuelto responde siempre en español, si es un número escribe el número no uses letras'
+    user_question=user_question+', busca  primero siempre la correspondencia entre las columnas de la información que te pida'
   #try:
 
         #if user_question:
