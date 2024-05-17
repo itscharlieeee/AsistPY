@@ -29,7 +29,7 @@ st.write('Te ayduaré a analizar los datos que cargues.')
 
 user_question = st.text_input("Que desesas saber de los datos?:")
 if user_question :
-    user_question=user_question+', busca  primero siempre la correspondencia entre las columnas de la información que te pida'
+    user_question=user_question+', busca  primero siempre la correspondencia entre las columnas y la información que te pida'
   #try:
 
         #if user_question:
