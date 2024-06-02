@@ -17,10 +17,11 @@ from PIL import Image
 
 st.title('Analítica de datos con Agentes 🤖🔍')
 image = Image.open('data_analisis.png')
+st.image(image)
 
 with st.sidebar:
    st.subheader("Este Agente de Pandas, te ayudará a realizar algo de análisis sobre tus datos")
-st.image(image)
+
 ke = st.text_input('Ingresa tu Clave')
 os.environ['OPENAI_API_KEY'] = ke
 
