@@ -18,12 +18,14 @@ from PIL import Image
 st.title('Analítica de datos con Agentes 🤖🔍')
 image = Image.open('data_analisis.png')
 
+with st.sidebar:
+   st.subheader("Este Agente de Pandas, te ayudará a realizar algo de análisis sobre tus datos")
 st.image(image)
 ke = st.text_input('Ingresa tu Clave')
 os.environ['OPENAI_API_KEY'] = ke
 
 
-uploaded_file = st.file_uploader('Choose a file')
+uploaded_file = st.file_uploader('Elige el archivo csv')
 if uploaded_file is not None:
    df=pd.read_csv(uploaded_file, on_bad_lines='skip') 
    st.write(df)
