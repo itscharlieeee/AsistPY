@@ -17,7 +17,7 @@ from PIL import Image
 
 st.title('Analítica de datos con Agentes 🤖🔍')
 image = Image.open('data_analisis.png')
-st.image(image)
+st.image(image,width=350)
 
 with st.sidebar:
    st.subheader("Este Agente de Pandas, te ayudará a realizar algo de análisis sobre tus datos")
