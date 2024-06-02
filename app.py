@@ -13,7 +13,7 @@ import streamlit as st
 import json
 import pandas as pd
 import numpy as np
-from PIL import image
+from PIL import Image
 
 st.title('Analítica de datos con Agentes 🤖🔍')
 image = Image.open('data_analisis.png')
