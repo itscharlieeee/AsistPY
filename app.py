@@ -30,7 +30,7 @@ if uploaded_file is not None:
    df=pd.read_csv(uploaded_file, on_bad_lines='skip') 
    st.write(df)
 
-st.write('Te ayduaré a analizar los datos que cargues.')
+st.markdown('Te ayduaré a analizar los datos que cargues.')
 
 user_question = st.text_input("Que desesas saber de los datos?:")
 if user_question :
