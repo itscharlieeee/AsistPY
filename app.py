@@ -13,9 +13,12 @@ import streamlit as st
 import json
 import pandas as pd
 import numpy as np
-
+from PIL import image
 
 st.title('Analítica de datos con Agentes 🤖🔍')
+image = Image.open('data_analisis.png')
+
+st.image(image)
 ke = st.text_input('Ingresa tu Clave')
 os.environ['OPENAI_API_KEY'] = ke
 
