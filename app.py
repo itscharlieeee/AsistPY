@@ -39,7 +39,7 @@ if user_question :
   #try:
 
         #if user_question:
-    agent = create_pandas_dataframe_agent(OpenAI(model_name="gpt-4o",temperature=0, max_tokens=300), df)
+    agent = create_pandas_dataframe_agent(OpenAI(model_name="gpt-4o",temperature=0, max_tokens=300), df,allow_dangerous_code=True)
     with get_openai_callback() as cb:
         response = agent.run(user_question)
        #print(cb)
